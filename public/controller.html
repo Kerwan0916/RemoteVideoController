@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function playVideo() {
+            socket.emit('playVideo');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="playVideo()">Browse Store</button>
+</body>
+</html>
