@@ -20,16 +20,25 @@
             height: 100%;
             margin: 0;
             display: flex;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
+            gap: 20px; /* Add some space between buttons */
         }
 
         button {
-            flex: 1;
-            width: 100%;
-            font-size: 10em;
+            height: 450px; 
+            width: 450px; 
+            border-radius: 50%; 
             border: none;
-            padding: 20px;
             cursor: pointer;
+            font-size: 4.5em; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'CustomFont', SuperMoods;
+            
         }
 
         button:nth-child(1) {
@@ -37,18 +46,31 @@
             color: white;
         }
 
+        button:nth-child(1):hover {
+            background-color: #06402B; /* dark green on hover */
+        }
+
         button:nth-child(2) {
             background-color: #f44336; /* Red for pause */
             color: white;
         }
 
+        button:nth-child(2):hover {
+            background-color: #d32f2f; /* darker red on hover */
+        }
+
         button:active {
             opacity: 0.8;
+        }
+
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('fonts/Verdana.ttf') format('truetype');
         }
     </style>
 </head>
 <body>
-    <button onclick="playVideo()">Play</button>
-    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="playVideo()">Interesting</button>
+    <button>Oops</button>
 </body>
 </html>
