@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player</title>
     <script src="/socket.io/socket.io.js"></script>
     <script>
@@ -17,8 +18,32 @@
             video.pause();
         });
     </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white; 
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 1280px;
+            height: 720px;
+        }
+    </style>
 </head>
 <body>
+    <img src="images/sample-image.jpg" alt="Sample Image">
     <video id="myVideo" width="1280" height="720" controls loop>
         <source src="videos/shrimp.mp4" type="video/mp4">
         Your browser does not support the video tag.
